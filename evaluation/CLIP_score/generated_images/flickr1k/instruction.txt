@@ -1,0 +1,1 @@
+conduct bash run_pipeline_flickr1k.sh to get the generated images.

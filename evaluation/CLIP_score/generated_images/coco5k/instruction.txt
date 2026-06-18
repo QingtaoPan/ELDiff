@@ -1,0 +1,1 @@
+conduct bash run_pipeline_coco5k_multigpu.sh to get the generated images

@@ -1,0 +1,7 @@
+pip install pytorch-fid
+
+conduct
+
+python -m pytorch_fid --batch-size=1 ./sample_imgs/flickr1k/CLIP-result ./data/flickr30k
+
+python -m pytorch_fid --batch-size=1 ./sample_imgs/coco5k/CLIP-result ./data/coco5k

@@ -1,0 +1,1 @@
+conduct python gen_img_obj.py to get the Object Accuracy (OA) score.

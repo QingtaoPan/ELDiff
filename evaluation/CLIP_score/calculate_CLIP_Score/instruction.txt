@@ -1,0 +1,1 @@
+conduct python text-image-similarity.py to get the CLIP Score.

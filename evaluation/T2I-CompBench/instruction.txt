@@ -1,0 +1,1 @@
+please reference https://github.com/Karine-Huang/T2I-CompBench
