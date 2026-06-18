@@ -126,6 +126,25 @@ bash train.sh
 The results will be saved under `train/results` directory.
 
 ## 📈 Evaluation
+### 1. VISOR
+First, generate images
+```bash
+cd evaluation/VISOR/generate_images
+bash run_pipeline_VISOR.sh
+```
+
+Second, calculate OA score
+```bash
+cd evaluation/VISOR/calculate_OA_score
+python gen_img_obj.py
+```
+
+### 2. MULTIGEN
+```bash
+bash run_pipeline.sh
+```
+
+### 3. CLIP_score
 
 
 ## 📜 License
