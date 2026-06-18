@@ -28,14 +28,14 @@ You can use the following code to download our checkpoints and generate images:
 import torch
 from diffusers import StableDiffusionPipeline
 
-model_id = "mlpc-lab/TokenCompose_SD14_A"
+model_id = "./ELDiff_SD14"
 device = "cuda"
 
 pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float32)
 pipe = pipe.to(device)
 
-prompt = "A cat and a wine glass"
+prompt = "A cheese cat is sucking catnip"
 image = pipe(prompt).images[0]  
     
-image.save("cat_and_wine_glass.png")
+image.save("cat.png")
 ```
