@@ -15,3 +15,27 @@ In this paper, we propose ELDiff, an evidential learning-supervised T2I diffusio
 <p align="center">
   <img src="figs/fig2.jpg" width="70%"></a> <br>
 </p>
+
+## 🆕 Models
+
+| Stable Diffusion Version | Checkpoint |
+|:------------------------:|:------------:|
+| v1.4                     | [ELDiff_SD14](https://huggingface.co/mlpc-lab/TokenCompose_SD14_A)    |
+| v2.1                     | [ELDiff_SD21](https://huggingface.co/mlpc-lab/TokenCompose_SD21_A)    
+
+You can use the following code to download our checkpoints and generate images:
+```python
+import torch
+from diffusers import StableDiffusionPipeline
+
+model_id = "mlpc-lab/TokenCompose_SD14_A"
+device = "cuda"
+
+pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float32)
+pipe = pipe.to(device)
+
+prompt = "A cat and a wine glass"
+image = pipe(prompt).images[0]  
+    
+image.save("cat_and_wine_glass.png")
+```
