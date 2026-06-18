@@ -74,7 +74,7 @@ train/data/
 
 ### 2. Setup Token-wise Grounded Segmentation Maps
 
-Download COCO segmentation data from [Google Drive](https://drive.google.com/file/d/16uoQpfZ0O-NW92HuaCaFU8K4cGHHbv4R/view?usp=drive_link) and put it under `train/data` directory.
+Download COCO segmentation data from [coco_gsam_seg](https://huggingface.co/datasets/pqt33/coco_gsam_seg) and put it under `train/data` directory.
 
 After this step, you should have the following structure under the `train/data` directory:
 
