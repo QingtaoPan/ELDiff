@@ -41,8 +41,81 @@ image.save("cat.png")
 ```
 
 ## 🌏 Environment Setup
+Create and activate the environment:
+```bash
+conda create -n ELDiff python=3.8.5
+conda activate ELDiff
+conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
+pip install -r requirements.txt
+```
 
+## 🗂️ Fine-tuning Data Setup
+### 1. Setup the COCO Image Data
 
+```bash
+cd train/data
+# download COCO train2017
+wget http://images.cocodataset.org/zips/train2017.zip
+unzip train2017.zip
+rm train2017.zip
+bash coco_data_setup.sh
+```
+
+After this step, you should have the following structure under the `train/data`  directory:
+
+```
+train/data/
+    coco_gsam_img/
+        train/
+            000000000142.jpg
+            000000000370.jpg
+            ...
+```
+
+### 2. Setup Token-wise Grounded Segmentation Maps
+
+Download COCO segmentation data from [Google Drive](https://drive.google.com/file/d/16uoQpfZ0O-NW92HuaCaFU8K4cGHHbv4R/view?usp=drive_link) and put it under `train/data` directory.
+
+After this step, you should have the following structure under the `train/data` directory:
+
+```
+train/data/
+    coco_gsam_img/
+        train/
+            000000000142.jpg
+            000000000370.jpg
+            ...
+    coco_gsam_seg.tar
+```
+
+Then, run the following command to unzip the segmentation data:
+
+```bash
+cd train/data
+tar -xvf coco_gsam_seg.tar
+rm coco_gsam_seg.tar
+```
+
+After the setup, you should have the following structure under the `train/data` directory:
+
+```
+train/data/
+    coco_gsam_img/
+        train/
+            000000000142.jpg
+            000000000370.jpg
+            ...
+    coco_gsam_seg/
+        000000000142/
+            mask_000000000142_bananas.png
+            mask_000000000142_bread.png
+            ...
+        000000000370/
+            mask_000000000370_bananas.png
+            mask_000000000370_bread.png
+            ...
+        ...
+```
 
 
 
