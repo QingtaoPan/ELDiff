@@ -39,3 +39,15 @@ image = pipe(prompt).images[0]
     
 image.save("cat.png")
 ```
+
+## 🌏 Environment Setup
+
+
+
+
+
+
+
+
+
+
