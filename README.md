@@ -20,8 +20,8 @@ In this paper, we propose ELDiff, an evidential learning-supervised T2I diffusio
 
 | Stable Diffusion Version | Checkpoint |
 |:------------------------:|:------------:|
-| v1.4                     | [ELDiff_SD14](https://huggingface.co/mlpc-lab/TokenCompose_SD14_A)    |
-| v2.1                     | [ELDiff_SD21](https://huggingface.co/mlpc-lab/TokenCompose_SD21_A)    
+| v1.4                     | [ELDiff_SD14](https://huggingface.co/pqt33/ELDiff_SD14)    |
+| v2.1                     | [ELDiff_SD21](https://huggingface.co/pqt33/ELDiff_SD21)    
 
 You can use the following code to download our checkpoints and generate images:
 ```python
