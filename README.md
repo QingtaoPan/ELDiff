@@ -117,8 +117,28 @@ train/data/
         ...
 ```
 
+## 🔥 Fine-tuning 
+use the following command:
+```bash
+cd train
+bash train.sh
+```
+The results will be saved under `train/results` directory.
 
+## 📜 License
 
+This repository is released under the [Apache 2.0](LICENSE) license. 
+
+## 🙏 Acknowledgement
+
+Our code is built upon [diffusers](https://github.com/huggingface/diffusers), [prompt-to-prompt](https://github.com/google/prompt-to-prompt), [VISOR](https://github.com/microsoft/VISOR), [Grounded-Segment-Anything](https://github.com/IDEA-Research/Grounded-Segment-Anything), [CLIP](https://github.com/openai/CLIP), and [TokenCompose](https://github.com/mlpc-ucsd/TokenCompose). We thank all these authors for their nicely open sourced code and their great contributions to the community.
+
+## 📚 Citation
+
+If you find our work useful, please consider citing:
+```bibtex
+
+```
 
 
 
