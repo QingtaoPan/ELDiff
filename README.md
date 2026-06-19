@@ -127,12 +127,11 @@ The results will be saved under `train/results` directory.
 
 ## 📈 Evaluation
 ### 1. VISOR
-First, generate images
+First, generate images for VISOR
 ```bash
 cd evaluation/VISOR/generate_images
 bash run_pipeline_VISOR.sh
 ```
-
 Second, calculate OA score
 ```bash
 cd evaluation/VISOR/calculate_OA_score
@@ -141,10 +140,35 @@ python gen_img_obj.py
 
 ### 2. MULTIGEN
 ```bash
+cd evaluation/MULTIGEN
 bash run_pipeline.sh
 ```
 
-### 3. CLIP_score
+### 3. CLIP_score of coco5k
+First, generate images for coco5k
+```bash
+cd evaluation/CLIP_score/generated_images/coco5k
+bash run_pipeline_coco5k_multigpu.sh
+```
+Second, calculate CLIP_score for coco5k
+```bash
+cd evaluation/CLIP_score/calculate_CLIP_Score
+python text-image-similarity.py
+```
+
+### 4. CLIP_score of flickr1k
+First, generate images for flickr1k
+```bash
+cd evaluation/CLIP_score/generated_images/flickr1k
+bash run_pipeline_flickr1k.sh
+```
+Second, calculate CLIP_score for flickr1k
+```bash
+cd evaluation/CLIP_score/calculate_CLIP_Score
+# modify the path: text_file_path = 'FlickrCaptions_1k.json' and generated_image = Image.open('/sample_imgs/flickr1k/CLIP-result/'+str(img_id)+'.png')
+python text-image-similarity.py
+```
+
 
 
 ## 📜 License
