@@ -169,6 +169,15 @@ cd evaluation/CLIP_score/calculate_CLIP_Score
 python text-image-similarity.py
 ```
 
+### 4. FID of coco5k and flickr1k
+For FID calculation, we use the generated images from CLIP_score of coco5k and CLIP_score of flickr1k
+```bash
+pip install pytorch-fid
+# calculate FID of coco5k
+python -m pytorch_fid --batch-size=1 ./sample_imgs/coco5k/CLIP-result ./data/coco5k
+# calculate FID of flickr1k
+python -m pytorch_fid --batch-size=1 ./sample_imgs/flickr1k/CLIP-result ./data/flickr30k
+```
 
 
 ## 📜 License
