@@ -6,7 +6,7 @@
 
 **ECCV, 2026**
 
-<a href='https://arxiv.org/abs/2603.11220'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
+<a href='https://arxiv.org/abs/2606.20924'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
 
 </div>
 
@@ -195,7 +195,12 @@ Our code is built upon [diffusers](https://github.com/huggingface/diffusers), [p
 
 If you find our work useful, please consider citing:
 ```bibtex
-
+@misc{pan2026eldiffevidentiallearningmeets,
+      title={ELDiff: When Evidential Learning Meets Text-to-Image Diffusion}, 
+      author={Qingtao Pan and Kai Ye and Zhihao Dou and Bing Ji and Shuo Li},
+      journal={arXiv preprint arXiv:2606.20924},
+      year={2026}
+}
 ```
 
 
